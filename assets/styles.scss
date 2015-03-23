@@ -1,0 +1,66 @@
+@mixin listStyle{
+	position: relative;
+	float:left;
+	padding: 0;
+	text-decoration:none;
+	list-style:none;
+}
+
+@mixin wallPics {
+	display: inline-block;
+	width:410px;
+	height:200px;
+}
+
+@mixin wallPicsSm {
+	display: inline-block;
+	margin: 0 10px 10px 0;
+}
+
+body {background-color:#dadee2; margin:20px; font-family: 'Helvetica', sans-serif;}
+
+h1 {text-align: center; text-transform: uppercase;}
+
+ul#image-wall {
+	border: 10px solid #000000;
+	padding: 0;
+	margin: 0 auto;
+	width:1182px;
+	height:415px;
+	background-color:#000000;
+}
+
+.one {
+	@include listStyle;
+	width:420px;
+}
+
+.two{
+	@include listStyle;
+	margin: 0 10px 0 0;
+}
+
+.three{
+	@include listStyle;
+	display: inline-block;
+	width:410px;
+}
+
+ul#image-wall li{
+	@include listStyle;
+}
+
+.sm-img {
+	@include listStyle;
+	@include wallPicsSm;
+}
+
+.med-img{
+	margin: 0 0 10px 0;
+}
+
+
+.img-wall-03 {@include wallPics;}
+.img-wall-04 {display: inline-block; margin: 0 10px 0 0;}
+.img-wall-05 {@include wallPics; margin: 0 0 10px 0;} 
+.img-wall-06 {@include wallPics;}
